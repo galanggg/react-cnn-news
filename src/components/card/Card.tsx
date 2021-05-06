@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const Card = React.memo(({ news, selectedNews }) => {
+export const Card = ({ news, selectedNews }) => {
   let topThreeNews = news.data?.slice(0, 3);
   return (
     <>
@@ -54,4 +52,4 @@ export const Card = React.memo(({ news, selectedNews }) => {
       </div>
     </>
   );
-});
+};
