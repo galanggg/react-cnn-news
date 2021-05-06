@@ -1,4 +1,6 @@
-export const Card = ({ news, selectedNews }) => {
+import React from 'react';
+
+export const Card = React.memo(({ news, selectedNews }) => {
   let topThreeNews = news.data?.slice(0, 3);
   return (
     <>
@@ -30,11 +32,11 @@ export const Card = ({ news, selectedNews }) => {
                     <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                       <div className="flex-1">
                         <p className="text-sm font-medium text-indigo-600">
-                          <a href="#" className="hover:underline">
+                          <a href="/" className="hover:underline">
                             {selectedNews}
                           </a>
                         </p>
-                        <a href="#" className="block mt-2">
+                        <a href="/" className="block mt-2">
                           <p className="text-xl font-semibold text-gray-900">
                             {news.title}
                           </p>
@@ -52,4 +54,4 @@ export const Card = ({ news, selectedNews }) => {
       </div>
     </>
   );
-};
+});

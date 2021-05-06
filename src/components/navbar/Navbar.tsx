@@ -10,7 +10,7 @@ export const Navbar = ({ selectedNews, onSelect }) => {
           <nav className="-mb-px flex" aria-label="Tabs">
             {categories.map((category) => {
               return (
-                <a
+                <button
                   key={category}
                   onClick={() => onSelect(category)}
                   className={
@@ -20,7 +20,7 @@ export const Navbar = ({ selectedNews, onSelect }) => {
                   }
                 >
                   {category}
-                </a>
+                </button>
               );
             })}
           </nav>
